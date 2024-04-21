@@ -4,12 +4,20 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'auth',
+    redirectTo: 'login',
     pathMatch: 'full',
   },
   {
-    path: 'auth',
-    loadChildren: () => import('./pages/auth/auth.module')
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module')
+  },
+  {
+    path: 'board',
+    loadChildren: () => import('./pages/board/board.module')
+  },
+  {
+    path: 'sign-up',
+    loadChildren: () => import('./pages/sign-up/sign-up.module')
   }
 ];
 
