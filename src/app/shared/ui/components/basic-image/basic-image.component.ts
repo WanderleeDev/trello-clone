@@ -11,7 +11,9 @@ interface IImageParams {
 @Component({
   selector: 'app-basic-image',
   templateUrl: './basic-image.component.html',
-  styles: '',
+  styles: `:host {
+    display: contents
+  }`,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BasicImageComponent {
